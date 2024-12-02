@@ -3,14 +3,16 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.ktorfitGradlePlugin)
 }
 
 android {
-    namespace = "com.example.retrofitsample"
+    namespace = "com.example.ktorfitsample"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.retrofitsample"
+        applicationId = "com.example.ktorfitsample"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -41,6 +43,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -57,9 +60,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation(libs.retrofit)
-    implementation(libs.retrofitSerialization)
-    implementation(libs.kotlinxSeialization)
-    implementation(libs.okhttp)
+    implementation(libs.ktorfitLib)
+    implementation(libs.ktorCore)
+    implementation(libs.ktorClientOkHttp)
+    implementation(libs.ktorContentNegotiation)
+    implementation(libs.ktorSerializationJson)
     implementation(libs.okHttpLoggingInterceptor)
 }

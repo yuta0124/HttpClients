@@ -62,6 +62,5 @@ dependencies {
     implementation(libs.ktorClientOkHttp)
     implementation(libs.ktorContentNegotiation)
     implementation(libs.ktorSerializationJson)
-    implementation(libs.kotlinxSeialization)
     implementation(libs.okHttpLoggingInterceptor)
 }
